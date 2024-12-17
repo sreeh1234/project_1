@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #edit_form{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" name="" id="search" placeholder="Search"><br><br>
+    <table id="a">
+        <thead> 
+            <tr>
+                <th>Roll_no</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>course</th>
+            </tr>   
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <form id="add_form">
+        <input type="number" name="" id="roll_no" placeholder="Roll_no">
+        <input type="text" name="" id="name" placeholder="Name">
+        <input type="email" name="" id="email" placeholder="Email">
+        <input type="number" name="" id="age" placeholder="Age">
+        <input type="text" name="" id="course" placeholder="course">
+        
+        <button type="submit" id="submitbtn">Add</button>
+    </form>
+
+    <form id="edit_form">
+        <input type="number" name="" id="eroll_no" placeholder="Roll_no">
+        <input type="text" name="" id="ename" placeholder="Name">
+        <input type="email" name="" id="eemail" placeholder="Email">
+        <input type="number" name="" id="eage" placeholder="Age">
+        <input type="text" name="" id="ecourse" placeholder="course">
+        
+        <button type="submit" id="submitbtn">Update</button>
+    </form>
+    
+
+    <script src="project.js"></script>
+</body>
+</html>
