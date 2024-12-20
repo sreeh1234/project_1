@@ -1,9 +1,19 @@
 let data=[{roll_no:'1',name:'manu',email:'manu@gmail.com',age:25,course:'bio'},{roll_no:'2',name:'ram',email:'ram@gmail.com',age:20,course:'commerce'},{roll_no:'3',name:'lalu',email:'lalu@gmail.com',age:23,course:'cs'}]
 
-function mngmt(){
+document.getElementById("search").addEventListener("input",function(){
+    console.log(this.value.toLowerCase());
+    
+    const qry = this.value.toLowerCase()
+    const result = data.filter((std)=>std.name.toLowerCase().includes(qry) || std.course.toLowerCase().includes(qry))
+    console.log(result);
+    mngmt(result)
+    
+})
+
+function mngmt(d=data){
     let table=document.querySelector("tbody")
     table.innerHTML=''
-    data.forEach((i) => {
+    d.forEach((i) => {
         let tr=document.createElement("tr")
         let roll_no_td=document.createElement("td")
         roll_no_td.innerHTML=i.roll_no
